@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+:root {
+    /*
+        Nord Palletes
+    */
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+}
+
+
+
+.eb-garamond {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .source-sans-3-normal {
+      font-family: "Source Sans 3", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+html {
+/*    height: 100%; !* Fallback CSS for IE 4-6 and older browsers. Note: Without this setting, body below cannot achieve 100% height. *!*/
+    height: 100vh;/* Overrides 100% height in modern HTML5 browsers and uses the viewport's height. Only works in modern HTML5 browsers */
+}
+
+body {
+    height: auto; /* Allows content to grow beyond the page without overflow */
+    width: auto; /* Allows content to grow beyond the page without overflow */
+/*    min-height: 100%; !* Starts web page with 100% height. Fallback for IE 4-6 and older browsers *!*/
+/*    min-height: 100vh;!* Starts web page with 100% height. Uses the viewport's height. Only works in modern HTML5 browsers *!*/
+/*    overflow-y: scroll;!* Optional: Adds an empty scrollbar to the right margin in case content grows vertically, creating a scrollbar.  Allows for better width calculations, as the browser pre-calculates width before scrollbar appears, avoiding page content shifting.*!*/
+    margin: 0;
+    padding: 0;
+/*    background:yellow;!* FOR TESTING: Next add a large block of text or content to your page and make sure this background color always fills the screen as your content scrolls off the page. If so, this works. You have 100% height with flexible content! *!*/
+
+    /* Above credit: Stokely, posted to StackOverflow 28th November, 2022. (stackoverflow.com/a/65836306) */
+    background:var(--nord0);
+    border-top: 10pt solid #71bf48;
+    border-bottom: 10pt solid #00a4e6;
+    padding-bottom: env(safe-area-inset-bottom);
+    font: 11pt "Source Sans 3", Verdana, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+
+}
+
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, label, ul, ol, dl, fieldset, address {
+    margin-bottom: 1em;
+}
+
+ul li p {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+a {
+	color: var(--nord11);
+}
+
+a:visited {
+
+}
+#container {
+	text-align: center;
+
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+	min-height: calc(100vh - 20pt);
+    max-width: 640px;
+    background: var(--nord4);
+    margin: 0 auto;
+    text-align: left;
+}
+
+header, main, footer {
+  margin: 0;
+  display: block;
+}
+
+nav#root {
+    text-align: right;
+    font-weight: bold;
+}
+
+nav#root ul {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+nav#root ul li {
+    margin-left: 0;
+    padding: 5px;
+    list-style: none;
+    display: inline;
+    text-transform: uppercase;
+}
+
+nav#root ul li a {
+    text-decoration: none;
+}
+
+nav#root ul li a:hover {
+    border-bottom: 5pt solid var(--nord12);
+}
+
+header {
+
+}
+
+header #logo {
+    margin: 0 auto 20px;
+    font-size:40pt;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+
+}
+
+main {
+}
