@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 :root {
-    /*
-        Nord Palletes
-    */
+    /* Nord */
     --nord0: #2e3440;
     --nord1: #3b4252;
     --nord2: #434c5e;
@@ -23,8 +21,6 @@
     --nord14: #a3be8c;
     --nord15: #b48ead;
 }
-
-
 
 .eb-garamond {
     font-family: "EB Garamond", serif;
@@ -57,8 +53,8 @@ body {
 
     /* Above credit: Stokely, posted to StackOverflow 28th November, 2022. (stackoverflow.com/a/65836306) */
     background:var(--nord0);
-    border-top: 10pt solid #71bf48;
-    border-bottom: 10pt solid #00a4e6;
+    border-top: 10pt solid var(--nord10);
+    border-bottom: 10pt solid var(--nord11);
     padding-bottom: env(safe-area-inset-bottom);
     font: 11pt "Source Sans 3", Verdana, sans-serif;
     font-optical-sizing: auto;
@@ -80,7 +76,7 @@ a {
 }
 
 a:visited {
-
+    color: var(--nord11);
 }
 #container {
 	text-align: center;
