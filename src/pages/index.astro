@@ -1,55 +1,27 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home Page";
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
-<!DOCTYPE html>
-<html lang=en>
-<head>
-    <title>Yeah Skippy</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/styles/site.css">
-</head>
-<body class="page">
-<div id="container">
-    <div id="content">
+<BaseLayout>
+        <section class="homepage-hero">
+            <h1>Hey, it's Skipp. &#x1F44B;</h1>
+            <p>I am an aspiring <strong>developer</strong> and <strong>technologist</strong>, with a strong background in live performance and theatre as a multi-displinary technician.</p>
+            <p>Experience in <strong>web development</strong> frameworks like React and Next.JS, <strong>networking</strong> and <strong>security fundamentals</strong>, databases MySQL, PostgreSQL. Language experience includes <strong>JavaScript/TypeScript</strong>, <strong>C#</strong>, <strong>Java</strong>, <strong>Python</strong>.</p>
+        </section>
+<!-- 
+        <div class="homepage-links">
+        <section class="homepage-hero">
+            <h2>Technical production</h2>
+        </section>
 
-        <nav id="root">
-            <ul>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Projects</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        <section class="homepage-hero">
+            <h2>Computer Science</h2>
+        </section>
+        </div> -->
+        <!-- <h2>
+            About this site
+        </h2>
+        <p>This page is hosted, with GitHub pages, using the Astro framework for its simplicity, and how the final source code looks.</p>
+        <p>The <code>joshskipp.dev</code> domain was purchased though Hover, if curious.</p> -->
 
-        <header>
-            <h1 id="logo">Yeah Skippy</h1>
-        </header>
-
-        <main>
-            <p class="">Here the main content of the site will go.</p>
-
-            <h2>
-                About this site
-            </h2>
-            <p>This page is hosted, with GitHub pages, using the Astro framework for its simplicity, and how the final source code looks.</p>
-            <p>The <code>joshskipp.dev</code> domain was purchased though Hover, if curious.</p>
-        </main>
-
-        <footer>
-            Copyright 2025 Josh Skipp. <br>
-            Made in Australia with local and imported ingredients.
-        </footer>
-
-    </div>
-</div>
-</body>
-</html>
+</BaseLayout>
