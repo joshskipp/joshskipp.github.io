@@ -23,29 +23,33 @@
 
 
 html {
-/*    height: 100%; !* Fallback CSS for IE 4-6 and older browsers. Note: Without this setting, body below cannot achieve 100% height. *!*/
+	height: 100%; 		/* Fallback CSS for IE 4-6 and older browsers. Note: Without this setting, body below cannot achieve 100% height. *!*/
     height: 100vh;/* Overrides 100% height in modern HTML5 browsers and uses the viewport's height. Only works in modern HTML5 browsers */
 }
 
 body {
     height: auto; /* Allows content to grow beyond the page without overflow */
     width: auto; /* Allows content to grow beyond the page without overflow */
-/*    min-height: 100%; !* Starts web page with 100% height. Fallback for IE 4-6 and older browsers *!*/
-/*    min-height: 100vh;!* Starts web page with 100% height. Uses the viewport's height. Only works in modern HTML5 browsers *!*/
-/*    overflow-y: scroll;!* Optional: Adds an empty scrollbar to the right margin in case content grows vertically, creating a scrollbar.  Allows for better width calculations, as the browser pre-calculates width before scrollbar appears, avoiding page content shifting.*!*/
+	min-height: 100%; /* Starts web page with 100% height. Fallback for IE 4-6 and older browsers */
+    min-height: 100vh; /* Starts web page with 100% height. Uses the viewport's height. Only works in modern HTML5 browsers *!*/
+	overflow-y: scroll; /* Optional: Adds an empty scrollbar to the right margin in case content grows vertically, creating a scrollbar.  Allows for better width calculations, as the browser pre-calculates width before scrollbar appears, avoiding page content shifting.*!*/
     margin: 0;
     padding: 0.5 rem;
-/*    background:yellow;!* FOR TESTING: Next add a large block of text or content to your page and make sure this background color always fills the screen as your content scrolls off the page. If so, this works. You have 100% height with flexible content! *!*/
+
+	/* FOR TESTING: Next add a large block of text or content to your page and make sure this background color always fills the screen as your content scrolls off the page. If so, this works. You have 100% height with flexible content! *!*/
+	/*    background:yellow;!
 
     /* Above credit: Stokely, posted to StackOverflow 28th November, 2022. (stackoverflow.com/a/65836306) */
+    
     background:var(--nord0);
     /* border-top: 10pt solid var(--nord10);
     border-bottom: 10pt solid var(--nord11); */
-    color: var(--nord4);
+    color: var(--nord6);
     padding-bottom: env(safe-area-inset-bottom);
-    font: 11pt 'Univers LT Std', Avenir, 'Segoe UI', 'Lucida Grande', Lucida, Verdana, sans-serif;
+    font: 12pt 'Univers LT Std', Avenir, 'Segoe UI', 'Lucida Grande', Lucida, Verdana, sans-serif;
     font-optical-sizing: auto;
     line-height: 1.5;
+    text-wrap: pretty;
 
 }
 
@@ -59,12 +63,23 @@ ul li p {
 }
 
 a {
-	color: var(--nord11);
+    text-decoration: none;
+    color: var(--nord4);
+    border-width: 0 0 1px 0;
+    padding: 0.2rem 0 0.12rem 0;
 }
 
-a:visited {
-    color: var(--nord11);
+a:link {
+    border-style: solid;
 }
+
+a:hover {
+    background-color: var(--nord3);
+    border-width: 0 0 1px 0;
+
+}
+
+
 #container {
 	text-align: center;
 
@@ -87,6 +102,7 @@ header, main, footer {
 nav#root {
     text-align: right;
     font-weight: bold;
+    padding-top: 0.5rem;
 }
 
 nav#root ul {
@@ -97,7 +113,6 @@ nav#root ul {
 
 nav#root ul li {
     margin-left: 0;
-    padding: 5px;
     list-style: none;
     display: inline;
     text-transform: uppercase;
@@ -105,14 +120,24 @@ nav#root ul li {
 
 nav#root ul li a {
     text-decoration: none;
+    border: none;
+    color: var(--nord4);
+    font-family: 'ibmmono';
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+
+    
 }
 
 nav#root ul li a:hover {
-    border-bottom: 5pt solid var(--nord12);
+    background-color: var(--nord2);
+	border-width: 0 0 1px 0;
+    border-style: solid;
+
 }
 
 header {
-    a {
+    a:link {
         color: var(--nord4);
         text-decoration: none;
     }
@@ -125,8 +150,7 @@ header {
 header #logo {
     margin: 0 auto 20px;
     font-size:20pt;
-    font-family: 'Univers LT Std', serif;
-    font-stretch: condensed;
+    font-family: 'ibmmono';
 }
 
 main {
@@ -263,6 +287,14 @@ div.homepage-links {
     font-stretch: condensed;
     src: url("fonts/univers/UniversLTStd-BoldCnObl.woff") format('woff');
     font-display:block
+}
+
+@font-face {
+    font-family: 'ibmmono';
+    font-weight: 400;
+    font-style: normal;
+    src: url('fonts/ibmplexmono/ibmplexmono-reg.ttf');
+    font-display: block;
 }
 
 /* Screen sizes */
