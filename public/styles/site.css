@@ -155,14 +155,14 @@ header #logo {
 
 main {
     flex: 1;
+    padding-bottom: 2rem;
 }
 
 footer {
-
-}
-
-main {
-
+    color: var(--nord4);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 article h1.title {
