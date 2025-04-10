@@ -112,9 +112,16 @@ nav#root ul li a:hover {
 }
 
 header {
+    a {
+        color: var(--nord4);
+        text-decoration: none;
+    }
 
+    a:visited {
+        color: var(--nord4);
+        text-decoration: none;
+    }
 }
-
 header #logo {
     margin: 0 auto 20px;
     font-size:20pt;
@@ -133,6 +140,21 @@ footer {
 main {
 
 }
+
+article h1.title {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--nord6);
+    font-size: 14pt;
+    a {
+        text-decoration: none;
+        color:inherit
+    }
+    a:hover {
+        text-decoration: underline;
+        color:inherit
+    }
+} 
 
 section.homepage-hero {
     padding: 1rem;

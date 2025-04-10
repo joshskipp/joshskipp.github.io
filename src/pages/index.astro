@@ -1,13 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+
+const projects = await Astro.glob('./projects/*.md')
+const posts = await Astro.glob('./blog/*.md')
 ---
 <BaseLayout>
-        <section class="homepage-hero">
-            <h1>Hey, it's Skipp. &#x1F44B;</h1>
-            <p>I am an aspiring <strong>developer</strong> and <strong>technologist</strong>, with a strong background in live performance and theatre as a multi-displinary technician.</p>
-            <p>Experience in <strong>web development</strong> frameworks like React and Next.JS, <strong>networking</strong> and <strong>security fundamentals</strong>, databases MySQL, PostgreSQL. Language experience includes <strong>JavaScript/TypeScript</strong>, <strong>C#</strong>, <strong>Java</strong>, <strong>Python</strong>.</p>
-        </section>
+  <section class="homepage-hero">
+      <h1>Hey, it's Skipp. &#x1F44B;</h1>
+      <p>I am an aspiring <strong>developer</strong> and <strong>technologist</strong>, with a strong background in live performance and theatre as a multi-displinary technician.</p>
+      <p>Experience in <strong>web development</strong> frameworks like React and Next.JS, <strong>networking</strong> and <strong>security fundamentals</strong>, databases MySQL, PostgreSQL. Language experience includes <strong>JavaScript/TypeScript</strong>, <strong>C#</strong>, <strong>Java</strong>, <strong>Python</strong>.</p>
+  </section>
+  
+
+  <section>
+    <h2>Projects</h2>
+    <p> I work on thigns, from productions to ... other things</p>
+      <ul> {
+        projects.map((project) => (
+        <li><a href={project.url}>{project.frontmatter.title}</a></li>
+        ))
+      } </ul>
+  </section>
+
+  <section>
+    <h2>Writings</h2>
+    <p>Sometimes I have opnions or something I want to share.</p>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={post.url}>{post.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </section>
 <!-- 
         <div class="homepage-links">
         <section class="homepage-hero">
@@ -18,10 +43,6 @@ const pageTitle = "Home Page";
             <h2>Computer Science</h2>
         </section>
         </div> -->
-        <!-- <h2>
-            About this site
-        </h2>
-        <p>This page is hosted, with GitHub pages, using the Astro framework for its simplicity, and how the final source code looks.</p>
-        <p>The <code>joshskipp.dev</code> domain was purchased though Hover, if curious.</p> -->
+        <!-- > -->
 
 </BaseLayout>

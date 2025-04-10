@@ -1,0 +1,12 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+const { frontmatter } = Astro.props;
+
+---
+<BaseLayout>
+    <article class="blog-post">
+        <h1 class="title">&#128279 <a href={frontmatter.link}>{frontmatter.title} ⬏</a></h1>
+        <p>{frontmatter.tag == 'link' ? (<>Linked by</>) : (<>By</>)} Skipp</p>
+        <slot />
+    </article>
+</BaseLayout>
