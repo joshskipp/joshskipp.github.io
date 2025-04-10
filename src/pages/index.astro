@@ -7,14 +7,14 @@ const posts = await Astro.glob('./blog/*.md')
 <BaseLayout>
   <section class="homepage-hero">
       <h1>Hey, it's Skipp. &#x1F44B;</h1>
-      <p>I am an aspiring <strong>developer</strong> and <strong>technologist</strong>, with a strong background in live performance and theatre as a multi-displinary technician.</p>
+      <p>I am an aspiring <strong>developer</strong> and <strong>technologist</strong>, with a strong background in live performance and theatre as a multi-disciplinary technician.</p>
       <p>Experience in <strong>web development</strong> frameworks like React and Next.JS, <strong>networking</strong> and <strong>security fundamentals</strong>, databases MySQL, PostgreSQL. Language experience includes <strong>JavaScript/TypeScript</strong>, <strong>C#</strong>, <strong>Java</strong>, <strong>Python</strong>.</p>
   </section>
   
 
   <section>
     <h2>Projects</h2>
-    <p> I work on thigns, from productions to ... other things</p>
+    <p> I work on things, from productions to ... other things</p>
       <ul> {
         projects.map((project) => (
         <li><a href={project.url}>{project.frontmatter.title}</a></li>
@@ -24,7 +24,7 @@ const posts = await Astro.glob('./blog/*.md')
 
   <section>
     <h2>Writings</h2>
-    <p>Sometimes I have opnions or something I want to share.</p>
+    <p>Sometimes I have opinions or something I want to share.</p>
     {
       posts.map((post) => (
         <li>
