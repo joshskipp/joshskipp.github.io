@@ -215,6 +215,63 @@ div.homepage-links {
     gap: 0.25rem;
 }
 
+div.two-col {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap-reverse; */
+    padding-top: 2rem;
+}
+
+div.sidebar {
+    display: flex;
+    flex-direction: column;
+    max-width: 10rem;
+    /* background-color:var(--nord1); */
+    line-height: 1;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+
+    h2 {
+        font-size: 10pt;
+        text-transform: uppercase;
+        /* margin: 0 0 0.5rem 0; */
+        font-family: 'ibmmono';
+        letter-spacing: 0.15rem;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: inline;
+    }
+
+    ul li {
+        margin-left: 0;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 9pt;
+        line-height: 1.75;
+        padding-bottom: 0.5rem;
+    }
+}
+
+div.main-area{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 1;
+    
+    h1 { 
+        margin:0;
+    }
+    p {
+        margin-top: 0;
+    }
+
+}
+
 
 
 /* FONTS */

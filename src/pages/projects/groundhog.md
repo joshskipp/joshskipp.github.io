@@ -1,5 +1,5 @@
 ---
-layout: '@layouts/BaseLayout.astro'
+layout: '@layouts/ProjectLayout.astro'
 title: 'Groundhog Day: The Musical (2024)'
 
 ---
