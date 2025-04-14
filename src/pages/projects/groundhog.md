@@ -7,7 +7,7 @@ date: 2024-01-01
 # Deputy Head of Lighting, *Groundhog Day: The Musical (2024)*
 Princess Theatre, Melbourne, VIC | **GWB Entertainment**
 
-<img class="hero" src="/public/images/groundhog-production.png" width="550" height="275" alt="The promotional poster logo for Groundhog Day: The Musical. It features a royal blue background with a thick yellow border. It features 'Groundhog Day' in lowercase in the same yellow, 'the musical' in white. Book by Danny Rubin, music and lyrics by Tim Minchin and developed and directed by Matthew Warchus.">
+<img class="hero" src="/images/groundhog-production.png" width="550" height="275" alt="The promotional poster logo for Groundhog Day: The Musical. It features a royal blue background with a thick yellow border. It features 'Groundhog Day' in lowercase in the same yellow, 'the musical' in white. Book by Danny Rubin, music and lyrics by Tim Minchin and developed and directed by Matthew Warchus.">
 
 _Well, it's Groundhog day. Again._
 
