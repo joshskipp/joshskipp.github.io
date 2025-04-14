@@ -207,6 +207,10 @@ section.homepage-hero {
     }
 }
 
+img.hero {
+    margin: 1rem 0;
+}
+
 div.homepage-links {
     margin-top: 0.25rem;
     display: flex;

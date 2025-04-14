@@ -1,19 +1,61 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
 const { frontmatter } = Astro.props;
-const posts = await Astro.glob('../pages/projects/*.md')
+//const posts = await Astro.glob('../pages/projects/*.md')
 
+// Import Astro types (if needed)
+import type { MarkdownInstance } from 'astro';
+
+// Define TypeScript interface for your frontmatter
+interface Frontmatter {
+  title: string;
+  date: string;
+  // Add other frontmatter properties as needed
+}
+
+// Use Astro's MarkdownInstance type instead of a custom Post type
+const posts: MarkdownInstance<Frontmatter>[] = await Astro.glob('../pages/projects/*.md');
+
+// Sort posts by date (newest first)
+const sortedPosts: MarkdownInstance<Frontmatter>[] = [...posts].sort((a, b) => 
+  new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+);
+
+// Group posts by year
+const postsByYear: Record<string, MarkdownInstance<Frontmatter>[]> = {};
+sortedPosts.forEach((post) => {
+  const year: string = new Date(post.frontmatter.date).getFullYear().toString();
+  if (!postsByYear[year]) {
+    postsByYear[year] = [];
+  }
+  postsByYear[year].push(post);
+});
+
+// Convert to array for easier rendering
+const years: string[] = Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a));
 ---
-
         <BaseLayout>
             <div class="two-col">
                 <div class="sidebar">
-                    <h2>Projects</h2>
+                    <!-- <h2>Projects</h2>
                     <ul>
                         {posts.map((post) => (
                             <li><a href={post.url}>{post.frontmatter.title}</a></li>
                         ))}
-                    </ul>
+                    </ul> -->
+
+                    <div class="posts-by-year">
+                        {years.map((year: string) => (
+                          <div class="year-section">
+                            <h2 class="year-heading">{year}</h2>
+                            <ul>
+                              {postsByYear[year].map((post) => (
+                                <li><a href={post.url}>{post.frontmatter.title}</a></li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
                 </div>
             
                 <div class="main-area">
